@@ -33,10 +33,9 @@ class The_Environment():
       self.prey_location = self.generate_location()
       self.predator_location = self.generate_location()
       self.agent_location = self.generate_location()
-      while(self.agent_location == self.predator_location):
+      while(self.agent_location == self.predator_location or self.agent_location == self.prey_location):
         self.agent_location = self.generate_location()
-      while(self.agent_location == self.prey_location):
-        self.agent_location = self.generate_location()
+   
 
     def init_graph(self):
       for i in range(1,total_nodes+1):
